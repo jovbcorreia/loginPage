@@ -1,17 +1,13 @@
 {
-  "name": "loginpage",
-  "version": "1.0.0",
-  "main": "loginPage.js",
+  "name": "jozzy-login-page",
+  "version": "2.0.0",
+  "description": "Clean minimal authentication UI with Node.js — JSON persistence, no frameworks",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "open": "^9.1.0",
-    "puppeteer": "^21.5.2",
-    "puppeteer-core": "^21.5.2"
-  },
-  "description": ""
+  "keywords": ["login", "authentication", "nodejs", "vanilla-js"],
+  "author": "João Vilas Boas Correia <joaopsn3@gmail.com>",
+  "license": "MIT",
+  "dependencies": {}
 }

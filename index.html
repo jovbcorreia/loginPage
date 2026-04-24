@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LoginPage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="landing">
+  <canvas id="particles"></canvas>
+
+  <nav class="nav">
+    <div class="nav-logo">Jozzy — Login Page</div>
+    <div class="nav-links">
+      <a href="login.html?mode=login" class="nav-link">Sign In</a>
+      <a href="login.html?mode=register" class="btn btn-sm btn-outline">Create Account</a>
+    </div>
+  </nav>
+
+  <main class="hero">
+    <p class="hero-tag">In-memory auth · Zero database</p>
+    <h1 class="hero-title">
+      Clean.<br>
+      <span class="accent">Secure.</span>
+    </h1>
+    <p class="hero-sub">
+      Register, sign in and explore.<br>
+      User data lives only while the server is running.
+    </p>
+    <div class="hero-ctas">
+      <a href="login.html?mode=login" class="btn btn-primary">
+        Sign In <span class="btn-arrow">→</span>
+      </a>
+      <a href="login.html?mode=register" class="btn btn-ghost">
+        Create Account
+      </a>
+    </div>
+  </main>
+
+  <script src="particles.js"></script>
+</body>
+</html>

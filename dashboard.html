@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home — LoginPage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dash-page">
+  <canvas id="particles"></canvas>
+
+  <nav class="nav">
+    <div class="nav-logo">Jozzy — Login Page</div>
+    <div class="nav-links">
+      <span class="nav-user" id="navUser"></span>
+      <button class="btn btn-sm btn-ghost-red" id="logoutBtn">Sign Out</button>
+    </div>
+  </nav>
+
+  <main class="dash-main">
+
+    <div class="dash-greeting">
+      <p class="greeting-label">Welcome back,</p>
+      <h1 class="greeting-name" id="userName">—</h1>
+    </div>
+
+    <div class="dash-cards">
+
+      <div class="dash-card">
+        <div class="dash-card-icon">◈</div>
+        <h3 class="dash-card-title">Active Session</h3>
+        <p class="dash-card-body">You are successfully authenticated. The session exists only in this tab.</p>
+      </div>
+
+      <div class="dash-card">
+        <div class="dash-card-icon">⬡</div>
+        <h3 class="dash-card-title">In-Memory Data</h3>
+        <p class="dash-card-body">Users are stored only in RAM. Restarting the server clears everything.</p>
+      </div>
+
+      <div class="dash-card">
+        <div class="dash-card-icon">✦</div>
+        <h3 class="dash-card-title">Zero Persistence</h3>
+        <p class="dash-card-body">No database. No files written to disk. Clean and minimal architecture.</p>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="particles.js"></script>
+  <script>
+    const name = sessionStorage.getItem('userName');
+    if (!name) { location.href = 'login.html'; }
+    document.getElementById('userName').textContent = name;
+    document.getElementById('navUser').textContent  = name;
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      sessionStorage.clear();
+      location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
